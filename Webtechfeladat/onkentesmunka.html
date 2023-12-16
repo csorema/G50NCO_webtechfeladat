@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Állatmentő Alapítvány - Önkéntes munka</title>
+</head>
+<body class="onkentesmunka">
+    <header>
+        <h1>Állatmentő Alapítvány</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="orokbefogadas.html">Örökbefogadás</a></li>
+            <li><a href="onkentesmunka.html">Önkéntes munka</a></li>
+            <li><a href="kapcsolat.html">Kapcsolat</a></li>
+        </ul>
+    </nav>
+
+    <section id="onkentesmunka" class="fade-in">
+        <h2>Önkéntes lehetőségek</h2>
+
+        <div class="image-container">
+            <img src="images/kuytasétáltatás.png" alt="Önkéntes munka 1">
+            
+            <p class="welcome-text">Gyere és sétáltasd meg egyik kiskedvencünket!</p>
+        </div>
+
+        <div id="volunteer-form">
+            <h3>Jelentkezés önkéntes munkára</h3>
+            <form action="process_form.php" method="post" onsubmit="submitForm(); return false;">
+                <table>
+                    <tr>
+                        <th>Adat</th>
+                        <th>Megadandó információ</th>
+                    </tr>
+                    <tr>
+                        <td>Vezetéknév:</td>
+                        <td><input type="text" name="vezeteknev" required></td>
+                    </tr>
+                    <tr>
+                        <td>Keresztnév:</td>
+                        <td><input type="text" name="keresztnev" required></td>
+                    </tr>
+                    <tr>
+                        <td>E-mail cím:</td>
+                        <td><input type="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td>Telefonszám:</td>
+                        <td><input type="tel" name="telefonszam" required></td>
+                    </tr>
+                    <tr>
+                        <td>Lakhely:</td>
+                        <td><input type="text" name="lakhely" required></td>
+                    </tr>
+                    <tr>
+                        <td>Írj magadról egy rövid bemutatkozót (max. 200 karakter):</td>
+                        <td><textarea name="leiras" maxlength="200" required></textarea></td>
+                    </tr>
+                </table>
+
+                <input type="submit" value="Jelentkezés">
+            </form>
+        </div>
+        <div class="image-container">
+            <img src="images/volunteer.jpg" alt="Önkéntes munka 2">
+        </div>
+    </section>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <p>Sikeres jelentkezés!</p>
+        <button onclick="closePopup()">Bezárás</button>
+    </div>
+    <script src="popup.js"></script>
+    <script src="fadeInAnimation.js"></script>
+</body>
+</html>
